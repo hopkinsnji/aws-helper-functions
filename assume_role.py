@@ -31,8 +31,7 @@ def _aws_role_to_client(role_arn, session_name, client, token_life=900):
     
     def _aws_role_to_client_with_region(role_arn, session_name, client, token_life=900, region):
     """ 
-    This takes in a role and returns a boto3 client. Same as above but this puts you in a region you specify. 
-    I won't need to use it this way if I am working in on region only.
+    Same as above but this puts you in a region you specify. 
     """
     sts_client = boto3.client("sts")
     try:
