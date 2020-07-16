@@ -1,6 +1,5 @@
 import boto3
-
-
+from botocore.exceptions import ClientError
 
 def _aws_role_to_client(role_arn, session_name, client, token_life=900):
     """ 
